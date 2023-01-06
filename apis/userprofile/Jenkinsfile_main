@@ -17,7 +17,7 @@ pipeline {
                     // some block
 		    echo 'Dockerhub Login'
                     sh 'sudo docker login -u $dockerUsr -p $dockerPwd'
-		    sh 'sudo docker push willido/userprofile:1.0'
+		    sh 'sudo docker push applesama/userprofile:1.0'
                 }
             }
 	}
