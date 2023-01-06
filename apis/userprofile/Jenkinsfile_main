@@ -11,8 +11,7 @@ pipeline {
 		}
             }
         }
-     stages {
-        stage('Run Docker Image') {
+     stage('Run Docker Image') {
             steps {
                 echo 'Runing docker image'
                 dir('apis/userprofile/') {
@@ -20,7 +19,7 @@ pipeline {
                 	sh 'sudo docker run -d --rm -p 80:5000 --name userprofile applesama/userprofile:1.0 .'
 		}
             }
-        }
+        
 	stage('Upload Docker Image') {
 	    steps {
                 withCredentials([usernamePassword(credentialsId: 'applesama_dockerhub', passwordVariable: 'dockerPwd', usernameVariable: 'dockerUsr')]) {
