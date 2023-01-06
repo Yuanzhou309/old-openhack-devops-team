@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Runing docker image'
                 dir('apis/userprofile/') {
-              		sh 'sudo docker expose 5000'
+              		
                 	sh 'sudo docker run -d --rm -p 80:5000 --name userprofile applesama/userprofile:1.0 .'
 		}
             }
