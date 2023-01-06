@@ -13,7 +13,7 @@ pipeline {
         }
 	stage('Upload Docker Image') {
 	    steps {
-                withCredentials([usernamePassword(credentialsId: 'willido_dockerhub', passwordVariable: 'dockerPwd', usernameVariable: 'dockerUsr')]) {
+                withCredentials([usernamePassword(credentialsId: 'applesama', passwordVariable: 'dockerPwd', usernameVariable: 'dockerUsr')]) {
                     // some block
 		    echo 'Dockerhub Login'
                     sh 'sudo docker login -u $dockerUsr -p $dockerPwd'
