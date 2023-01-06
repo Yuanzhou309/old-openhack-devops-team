@@ -19,6 +19,7 @@ pipeline {
                 	sh 'sudo docker run -d --rm -p 80:5000 --name userprofile applesama/userprofile:1.0 .'
 		}
             }
+	 }
         
 	stage('Upload Docker Image') {
 	    steps {
