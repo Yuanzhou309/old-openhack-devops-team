@@ -16,7 +16,7 @@ pipeline {
                 echo 'Runing docker image'
                 dir('apis/userprofile/') {
               		
-                	sh 'sudo docker run -d -p 5000:8080 --name userprofile applesama/userprofile:1.0 .'
+                	sh 'sudo docker run -d --rm -p 5000:8080 --name userprofile applesama/userprofile:1.0 .'
 		}
             }
 	 }
